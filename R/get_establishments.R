@@ -38,7 +38,7 @@
 #'
 get_establishments <- function(name = NULL, la = NULL, type = NULL, condensed = TRUE) {
   name <- gsub(" ", "%20", name)
-  query <- paste0("api.ratings.food.gov.uk/Establishments?name=",name,"&businessTypeId=",type,"&localAuthorityId=",la)
+  query <- paste0("https://api.ratings.food.gov.uk/Establishments?name=",name,"&businessTypeId=",type,"&localAuthorityId=",la)
   pages <- getpages(query)
   if(pages == 0) {
     return("No results")

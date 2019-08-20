@@ -13,7 +13,7 @@
 #' @export
 #'
 get_business_types <- function() {
-  getbtype <- httr::GET("api.ratings.food.gov.uk/BusinessTypes", httr::add_headers('x-api-version' = 2))
+  getbtype <- httr::GET("https://api.ratings.food.gov.uk/BusinessTypes", httr::add_headers('x-api-version' = 2))
   httr::content(getbtype, "text") %>%
     jsonlite::fromJSON() %>%
     .$businessTypes %>%

@@ -22,8 +22,8 @@
 #' @export
 #'
 get_authorities <- function(country = NULL) {
-  getbtype <- httr::GET("api.ratings.food.gov.uk/Authorities", httr::add_headers('x-api-version' = 2))
-  la <- httr::content(getbtype, "text") %>%
+  getauth <- httr::GET("https://api.ratings.food.gov.uk/Authorities", httr::add_headers('x-api-version' = 2))
+  la <- httr::content(getauth, "text") %>%
     jsonlite::fromJSON() %>%
     .$authorities %>%
     tibble::as_tibble()

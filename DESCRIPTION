@@ -1,7 +1,7 @@
 Package: fhrsdata
 Type: Package
 Title: Returns Data from the FHRS API
-Version: 0.1.0
+Version: 0.1.1
 Author: Helen Graham
 Maintainer: Helen Graham <helen.graham@food.gov.uk>
 Description: The package provides functions that perform API calls to retrieve 
